@@ -320,11 +320,11 @@ body {
 }
 
 .marquee-track-forward {
-  animation: scrollMarqueeForward 40s linear infinite;
+  animation: scrollMarqueeForward 110s linear infinite;
 }
 
 .marquee-track-reverse {
-  animation: scrollMarqueeReverse 45s linear infinite;
+  animation: scrollMarqueeReverse 125s linear infinite;
 }
 
 .marquee-band:hover .marquee-track {
@@ -421,24 +421,32 @@ body {
 .marquee-quote-item {
   display: inline-flex;
   align-items: center;
-  gap: 1.2rem;
-  padding: 0.6rem 1.8rem;
+  gap: 1.6rem;
+  padding: 0.85rem 2.2rem;
   white-space: nowrap;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 9999px;
+  margin: 0 0.4rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
 }
 
 .marquee-quote-item:hover {
-  transform: scale(1.02);
+  transform: translateY(-2px) scale(1.03);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.6);
 }
 
 .marquee-quote-item::after {
   content: "✦";
-  color: rgba(168, 85, 247, 0.45);
-  font-size: 0.75em;
+  color: rgba(168, 85, 247, 0.55);
+  font-size: 0.85em;
   margin-left: 1.2rem;
-  text-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
+  text-shadow: 0 0 10px rgba(168, 85, 247, 0.7);
 }
 
 @media (prefers-reduced-motion: reduce) {

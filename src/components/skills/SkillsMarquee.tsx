@@ -121,29 +121,29 @@ export const SkillsMarquee: React.FC<SkillsMarqueeProps> = ({
         className="marquee-quote-item group/quote cursor-pointer text-left"
       >
         {/* Unified Glass Pod for the Logo */}
-        <span className="flex items-center gap-2.5 shrink-0">
+        <span className="flex items-center gap-3 shrink-0">
           <span
-            className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/[0.05] border border-white/10 flex items-center justify-center transition-transform duration-300 group-hover/quote:scale-110"
+            className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-white/[0.06] border border-white/10 flex items-center justify-center transition-transform duration-300 group-hover/quote:scale-110 shrink-0"
             style={{
-              borderColor: isHovered || isActive ? skill.brandColor : 'rgba(255, 255, 255, 0.1)',
+              borderColor: isHovered || isActive ? skill.brandColor : 'rgba(255, 255, 255, 0.12)',
               boxShadow:
                 isHovered || isActive
-                  ? `0 0 12px ${skill.brandColor}60`
-                  : '0 2px 6px rgba(0,0,0,0.5)',
+                  ? `0 0 16px ${skill.brandColor}70`
+                  : '0 2px 8px rgba(0,0,0,0.5)',
             }}
           >
             <TechLogo
               id={skill.id}
-              size={18}
+              size={22}
               color={isHovered || isActive ? skill.brandColor : undefined}
             />
           </span>
 
           <span
-            className="font-bold uppercase tracking-wide text-sm sm:text-base font-['Bricolage_Grotesque'] transition-colors duration-200"
+            className="font-extrabold uppercase tracking-wide text-base sm:text-lg md:text-xl font-['Bricolage_Grotesque'] transition-colors duration-200"
             style={{
               color: isHovered || isActive ? skill.brandColor : '#FFFFFF',
-              textShadow: isHovered || isActive ? `0 0 12px ${skill.brandColor}80` : 'none',
+              textShadow: isHovered || isActive ? `0 0 14px ${skill.brandColor}90` : 'none',
             }}
           >
             {skill.name}
@@ -151,13 +151,13 @@ export const SkillsMarquee: React.FC<SkillsMarqueeProps> = ({
         </span>
 
         {/* Separator dash */}
-        <span className="text-neutral-500 font-mono text-xs select-none">—</span>
+        <span className="text-neutral-500 font-mono text-sm select-none">—</span>
 
         {/* The One-Liner Quote */}
         <span
-          className={`font-medium text-xs sm:text-sm tracking-normal transition-colors duration-200 ${
+          className={`font-medium text-sm sm:text-base md:text-lg tracking-normal transition-colors duration-200 ${
             isHovered || isActive
-              ? 'text-white font-semibold drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]'
+              ? 'text-white font-semibold drop-shadow-[0_0_10px_rgba(255,255,255,0.45)]'
               : 'text-neutral-300 group-hover/quote:text-white'
           }`}
         >
