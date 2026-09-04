@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { SkillItem, PROJECT_NAMES } from '../../data/skills';
 import { OFFICIAL_LOGOS } from '../../data/officialLogos';
+import { TechLogo } from './TechLogo';
 import { playMechanicalClick } from './audio';
 
 interface SkillSpotlightProps {
@@ -192,21 +193,9 @@ export const SkillSpotlight: React.FC<SkillSpotlightProps> = ({
                   {/* Keycap Top Dish Concave Highlight */}
                   <div className="absolute inset-1 rounded-xl bg-gradient-to-b from-white/25 via-transparent to-black/30 pointer-events-none" />
 
-                  {/* Center Official Vector Logo */}
+                  {/* Center Official Vector Logo (Scheme A CDN + Scheme B Iconify) */}
                   <div className="relative z-10 w-10 h-10 sm:w-11 sm:h-11 flex items-center justify-center">
-                    {logoMeta?.dataUri ? (
-                      <img
-                        src={logoMeta.dataUri}
-                        alt={activeSkill.name}
-                        className="w-full h-full object-contain pointer-events-none drop-shadow-lg"
-                        loading="lazy"
-                        referrerPolicy="no-referrer"
-                      />
-                    ) : (
-                      <span className="text-white text-base font-bold">
-                        {activeSkill.name.slice(0, 2)}
-                      </span>
-                    )}
+                    <TechLogo id={activeSkill.id} size={42} color="#FFFFFF" />
                   </div>
 
                   {/* Sound Trigger Icon */}

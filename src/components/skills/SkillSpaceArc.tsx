@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Orbit, Sparkles } from 'lucide-react';
 import { SkillItem } from '../../data/skills';
 import { OFFICIAL_LOGOS } from '../../data/officialLogos';
+import { TechLogo } from './TechLogo';
 
 interface SkillSpaceArcProps {
   skills: SkillItem[];
@@ -143,21 +144,9 @@ export const SkillSpaceArc: React.FC<SkillSpaceArcProps> = ({
                         style={{ backgroundColor: brandColor }}
                       />
 
-                      {/* Official Vector Logo */}
+                      {/* Official Vector Logo (Scheme A CDN + Scheme B Iconify) */}
                       <div className="relative z-10 w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 flex items-center justify-center">
-                        {logoMeta?.dataUri ? (
-                          <img
-                            src={logoMeta.dataUri}
-                            alt={skill.name}
-                            className="w-full h-full object-contain pointer-events-none drop-shadow"
-                            loading="lazy"
-                            referrerPolicy="no-referrer"
-                          />
-                        ) : (
-                          <span className="text-white text-xs font-bold">
-                            {skill.name.slice(0, 2)}
-                          </span>
-                        )}
+                        <TechLogo id={skill.id} size={32} color={brandColor} />
                       </div>
 
                       {/* Tooltip Badge on Hover */}

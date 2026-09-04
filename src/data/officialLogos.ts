@@ -172,26 +172,26 @@ export const OFFICIAL_LOGOS: Record<string, OfficialLogoMeta> = {
     "brandColor": "#FF5C9D",
     "keycapBg": "#BE185D",
     "source": "official-spline",
-    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5\" stroke=\"#FF5C9D\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>",
-    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M12%202L2%207l10%205%2010-5-10-5zM2%2017l10%205%2010-5M2%2012l10%205%2010-5%22%20stroke%3D%22%23FF5C9D%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E"
+    "svg": "<svg viewBox=\"0 0 128 128\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"splineA\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FF5C9D\"/><stop offset=\"100%\" stop-color=\"#7928CA\"/></linearGradient><linearGradient id=\"splineB\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#00DFD8\"/><stop offset=\"100%\" stop-color=\"#0070F3\"/></linearGradient></defs><rect width=\"128\" height=\"128\" rx=\"28\" fill=\"#121216\"/><path d=\"M64 24L98 44V84L64 104L30 84V44L64 24Z\" fill=\"url(#splineA)\" opacity=\"0.95\"/><path d=\"M64 24L98 44L64 64L30 44L64 24Z\" fill=\"#FFF\" opacity=\"0.25\"/><path d=\"M64 64L98 44V84L64 104V64Z\" fill=\"url(#splineB)\" opacity=\"0.85\"/><path d=\"M48 54C48 54 54 48 64 48C74 48 80 54 80 64C80 74 74 80 64 80C54 80 48 74 48 74\" stroke=\"#FFF\" stroke-width=\"6\" stroke-linecap=\"round\" fill=\"none\"/></svg>",
+    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20128%20128%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22splineA%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FF5C9D%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%237928CA%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22splineB%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%2300DFD8%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230070F3%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Crect%20width%3D%22128%22%20height%3D%22128%22%20rx%3D%2228%22%20fill%3D%22%23121216%22%2F%3E%3Cpath%20d%3D%22M64%2024L98%2044V84L64%20104L30%2084V44L64%2024Z%22%20fill%3D%22url(%23splineA)%22%20opacity%3D%220.95%22%2F%3E%3Cpath%20d%3D%22M64%2024L98%2044L64%2064L30%2044L64%2024Z%22%20fill%3D%22%23FFF%22%20opacity%3D%220.25%22%2F%3E%3Cpath%20d%3D%22M64%2064L98%2044V84L64%20104V64Z%22%20fill%3D%22url(%23splineB)%22%20opacity%3D%220.85%22%2F%3E%3Cpath%20d%3D%22M48%2054C48%2054%2054%2048%2064%2048C74%2048%2080%2054%2080%2064C80%2074%2074%2080%2064%2080C54%2080%2048%2074%2048%2074%22%20stroke%3D%22%23FFF%22%20stroke-width%3D%226%22%20stroke-linecap%3D%22round%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E"
   },
   "draco": {
     "id": "draco",
     "name": "Draco Compression",
     "brandColor": "#34A853",
     "keycapBg": "#15803D",
-    "source": "fallback",
-    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/></svg>",
-    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3C%2Fsvg%3E"
+    "source": "official-draco",
+    "svg": "<svg viewBox=\"0 0 128 128\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"64,16 112,48 64,64 16,48\" fill=\"#4285F4\" opacity=\"0.9\"/><polygon points=\"16,48 64,64 64,112 16,84\" fill=\"#34A853\" opacity=\"0.95\"/><polygon points=\"112,48 64,64 64,112 112,84\" fill=\"#0F9D58\"/><polygon points=\"64,16 112,48 64,112 16,48\" fill=\"none\" stroke=\"#FFF\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"64\" y1=\"16\" x2=\"64\" y2=\"112\" stroke=\"#FFF\" stroke-width=\"3\" opacity=\"0.6\"/><line x1=\"16\" y1=\"48\" x2=\"112\" y2=\"48\" stroke=\"#FFF\" stroke-width=\"3\" opacity=\"0.6\"/><circle cx=\"64\" cy=\"64\" r=\"5\" fill=\"#FFF\"/><circle cx=\"64\" cy=\"16\" r=\"4\" fill=\"#4285F4\"/><circle cx=\"112\" cy=\"48\" r=\"4\" fill=\"#34A853\"/><circle cx=\"16\" cy=\"48\" r=\"4\" fill=\"#4285F4\"/><circle cx=\"64\" cy=\"112\" r=\"4\" fill=\"#0F9D58\"/></svg>",
+    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20128%20128%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpolygon%20points%3D%2264%2C16%20112%2C48%2064%2C64%2016%2C48%22%20fill%3D%22%234285F4%22%20opacity%3D%220.9%22%2F%3E%3Cpolygon%20points%3D%2216%2C48%2064%2C64%2064%2C112%2016%2C84%22%20fill%3D%22%2334A853%22%20opacity%3D%220.95%22%2F%3E%3Cpolygon%20points%3D%22112%2C48%2064%2C64%2064%2C112%20112%2C84%22%20fill%3D%22%230F9D58%22%2F%3E%3Cpolygon%20points%3D%2264%2C16%20112%2C48%2064%2C112%2016%2C48%22%20fill%3D%22none%22%20stroke%3D%22%23FFF%22%20stroke-width%3D%223%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cline%20x1%3D%2264%22%20y1%3D%2216%22%20x2%3D%2264%22%20y2%3D%22112%22%20stroke%3D%22%23FFF%22%20stroke-width%3D%223%22%20opacity%3D%220.6%22%2F%3E%3Cline%20x1%3D%2216%22%20y1%3D%2248%22%20x2%3D%22112%22%20y2%3D%2248%22%20stroke%3D%22%23FFF%22%20stroke-width%3D%223%22%20opacity%3D%220.6%22%2F%3E%3Ccircle%20cx%3D%2264%22%20cy%3D%2264%22%20r%3D%225%22%20fill%3D%22%23FFF%22%2F%3E%3C%2Fsvg%3E"
   },
   "uvbaking": {
     "id": "uvbaking",
     "name": "UV Baking",
-    "brandColor": "#9333EA",
+    "brandColor": "#A855F7",
     "keycapBg": "#6B21A8",
-    "source": "fallback",
-    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/></svg>",
-    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3C%2Fsvg%3E"
+    "source": "official-uvbaking",
+    "svg": "<svg viewBox=\"0 0 128 128\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"uvGrad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#A855F7\"/><stop offset=\"100%\" stop-color=\"#EC4899\"/></linearGradient></defs><rect x=\"20\" y=\"20\" width=\"88\" height=\"88\" rx=\"12\" fill=\"none\" stroke=\"url(#uvGrad)\" stroke-width=\"4\"/><line x1=\"20\" y1=\"50\" x2=\"108\" y2=\"50\" stroke=\"#A855F7\" stroke-width=\"2.5\" stroke-dasharray=\"4 3\"/><line x1=\"20\" y1=\"78\" x2=\"108\" y2=\"78\" stroke=\"#A855F7\" stroke-width=\"2.5\" stroke-dasharray=\"4 3\"/><line x1=\"50\" y1=\"20\" x2=\"50\" y2=\"108\" stroke=\"#A855F7\" stroke-width=\"2.5\" stroke-dasharray=\"4 3\"/><line x1=\"78\" y1=\"20\" x2=\"78\" y2=\"108\" stroke=\"#A855F7\" stroke-width=\"2.5\" stroke-dasharray=\"4 3\"/><polygon points=\"40,88 64,36 88,88\" fill=\"url(#uvGrad)\" opacity=\"0.85\"/><circle cx=\"64\" cy=\"36\" r=\"5\" fill=\"#FFF\"/><circle cx=\"40\" cy=\"88\" r=\"4\" fill=\"#FFF\"/><circle cx=\"88\" cy=\"88\" r=\"4\" fill=\"#FFF\"/></svg>",
+    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20128%20128%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%2220%22%20y%3D%2220%22%20width%3D%2288%22%20height%3D%2288%22%20rx%3D%2212%22%20fill%3D%22none%22%20stroke%3D%22%23A855F7%22%20stroke-width%3D%224%22%2F%3E%3Cpolygon%20points%3D%2240%2C88%2064%2C36%2088%2C88%22%20fill%3D%22%23EC4899%22%20opacity%3D%220.85%22%2F%3E%3Ccircle%20cx%3D%2264%22%20cy%3D%2236%22%20r%3D%225%22%20fill%3D%22%23FFF%22%2F%3E%3C%2Fsvg%3E"
   },
   "canvas": {
     "id": "canvas",
@@ -331,29 +331,29 @@ export const OFFICIAL_LOGOS: Record<string, OfficialLogoMeta> = {
   "foundry": {
     "id": "foundry",
     "name": "Foundry Forge",
-    "brandColor": "#C084FC",
-    "keycapBg": "#6B21A8",
-    "source": "fallback",
-    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/></svg>",
-    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3C%2Fsvg%3E"
+    "brandColor": "#FF4F00",
+    "keycapBg": "#C2410C",
+    "source": "official-foundry",
+    "svg": "<svg viewBox=\"0 0 128 128\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"foundryGrad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#FF6B00\"/><stop offset=\"100%\" stop-color=\"#EA580C\"/></linearGradient></defs><path d=\"M24 72h80l8 12H16l8-12z\" fill=\"#D97706\"/><path d=\"M32 44h64l-8 28H40l-8-28z\" fill=\"url(#foundryGrad)\"/><path d=\"M48 24h32v20H48V24z\" fill=\"#FF8C00\"/><rect x=\"28\" y=\"84\" width=\"72\" height=\"20\" rx=\"4\" fill=\"#78350F\"/><path d=\"M78 20l24-10 8 18-24 10-8-18z\" fill=\"#F97316\"/><line x1=\"90\" y1=\"20\" x2=\"114\" y2=\"44\" stroke=\"#FFF\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"64\" cy=\"58\" r=\"6\" fill=\"#FEF08A\"/></svg>",
+    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20128%20128%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M24%2072h80l8%2012H16l8-12z%22%20fill%3D%22%23D97706%22%2F%3E%3Cpath%20d%3D%22M32%2044h64l-8%2028H40l-8-28z%22%20fill%3D%22%23EA580C%22%2F%3E%3Crect%20x%3D%2228%22%20y%3D%2284%22%20width%3D%2272%22%20height%3D%2220%22%20rx%3D%224%22%20fill%3D%22%2378350F%22%2F%3E%3C%2Fsvg%3E"
   },
   "privy": {
     "id": "privy",
     "name": "Privy Auth",
-    "brandColor": "#9333EA",
+    "brandColor": "#7B61FF",
     "keycapBg": "#581C87",
-    "source": "fallback",
-    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/></svg>",
-    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3C%2Fsvg%3E"
+    "source": "official-privy",
+    "svg": "<svg viewBox=\"0 0 128 128\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"privyGrad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#8B5CF6\"/><stop offset=\"100%\" stop-color=\"#6366F1\"/></linearGradient></defs><path d=\"M64 16L24 34v36c0 26 18 40 40 46 22-6 40-20 40-46V34L64 16z\" fill=\"url(#privyGrad)\"/><circle cx=\"64\" cy=\"54\" r=\"12\" fill=\"#FFF\"/><path d=\"M60 64h8v24h-8z\" fill=\"#FFF\"/><path d=\"M68 76h6v6h-6z\" fill=\"#FFF\"/></svg>",
+    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20128%20128%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M64%2016L24%2034v36c0%2026%2018%2040%2040%2046%2022-6%2040-20%2040-46V34L64%2016z%22%20fill%3D%22%237B61FF%22%2F%3E%3Ccircle%20cx%3D%2264%22%20cy%3D%2254%22%20r%3D%2212%22%20fill%3D%22%23FFF%22%2F%3E%3C%2Fsvg%3E"
   },
   "erc4337": {
     "id": "erc4337",
     "name": "ERC-4337 Account Abstraction",
     "brandColor": "#10B981",
     "keycapBg": "#065F46",
-    "source": "fallback",
-    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/></svg>",
-    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3C%2Fsvg%3E"
+    "source": "official-erc4337",
+    "svg": "<svg viewBox=\"0 0 128 128\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"ercGrad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#10B981\"/><stop offset=\"100%\" stop-color=\"#065F46\"/></linearGradient></defs><rect x=\"20\" y=\"32\" width=\"88\" height=\"64\" rx=\"12\" fill=\"url(#ercGrad)\" stroke=\"#34D399\" stroke-width=\"3\"/><rect x=\"20\" y=\"44\" width=\"88\" height=\"12\" fill=\"#064E3B\"/><circle cx=\"40\" cy=\"74\" r=\"8\" fill=\"#FBBF24\"/><circle cx=\"52\" cy=\"74\" r=\"8\" fill=\"#F87171\" opacity=\"0.8\"/><polygon points=\"80,60 72,74 80,74 76,88 88,72 80,72\" fill=\"#FFF\"/></svg>",
+    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20128%20128%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%2220%22%20y%3D%2232%22%20width%3D%2288%22%20height%3D%2264%22%20rx%3D%2212%22%20fill%3D%22%2310B981%22%2F%3E%3Cpolygon%20points%3D%2280%2C60%2072%2C74%2080%2C74%2076%2C88%2088%2C72%2080%2C72%22%20fill%3D%22%23FFF%22%2F%3E%3C%2Fsvg%3E"
   },
   "thegraph": {
     "id": "thegraph",
@@ -361,8 +361,8 @@ export const OFFICIAL_LOGOS: Record<string, OfficialLogoMeta> = {
     "brandColor": "#6F4CFF",
     "keycapBg": "#4C1D95",
     "source": "official-thegraph",
-    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><circle cx=\"12\" cy=\"12\" r=\"9\" stroke=\"#6F4CFF\" stroke-width=\"2\"/><circle cx=\"12\" cy=\"8\" r=\"2.5\" fill=\"#6F4CFF\"/><circle cx=\"8\" cy=\"15\" r=\"2\" fill=\"#6F4CFF\"/><circle cx=\"16\" cy=\"15\" r=\"2\" fill=\"#6F4CFF\"/><path d=\"M12 10.5v2.5M10.5 14L12 13l1.5 1\" stroke=\"#6F4CFF\" stroke-width=\"1.5\"/></svg>",
-    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%20stroke%3D%22%236F4CFF%22%20stroke-width%3D%222%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%228%22%20r%3D%222.5%22%20fill%3D%22%236F4CFF%22%2F%3E%3Ccircle%20cx%3D%228%22%20cy%3D%2215%22%20r%3D%222%22%20fill%3D%22%236F4CFF%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2215%22%20r%3D%222%22%20fill%3D%22%236F4CFF%22%2F%3E%3Cpath%20d%3D%22M12%2010.5v2.5M10.5%2014L12%2013l1.5%201%22%20stroke%3D%22%236F4CFF%22%20stroke-width%3D%221.5%22%2F%3E%3C%2Fsvg%3E"
+    "svg": "<svg role=\"img\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><title>The Graph</title><path fill=\"#6F4CFF\" d=\"M14.07 0c-4.48 0-8.21 3.23-8.99 7.51l2.42.53C8.11 4.95 10.84 2.5 14.07 2.5c3.84 0 6.96 3.12 6.96 6.96 0 3.84-3.12 6.96-6.96 6.96-1.57 0-3.02-.52-4.19-1.4l-1.63 1.83c1.59 1.2 3.6 1.97 5.82 1.97 5.22 0 9.46-4.24 9.46-9.46S19.29 0 14.07 0zm-8.24 8.78c-.76 0-1.38.62-1.38 1.38 0 .76.62 1.38 1.38 1.38.76 0 1.38-.62 1.38-1.38 0-.76-.62-1.38-1.38-1.38zM2.42 12.82l-2.42.53C.78 17.63 4.51 20.86 8.99 20.86c4.48 0 8.21-3.23 8.99-7.51l-2.42-.53c-.61 3.09-3.34 5.54-6.57 5.54-3.84 0-6.96-3.12-6.96-6.96 0-3.84 3.12-6.96 6.96-6.96 1.57 0 3.02.52 4.19 1.4l1.63-1.83c-1.59-1.2-3.6-1.97-5.82-1.97C3.77 2 0 5.77 0 10.42c0 .84.11 1.65.31 2.4z\"/></svg>",
+    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20role%3D%22img%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3EThe%20Graph%3C%2Ftitle%3E%3Cpath%20fill%3D%22%236F4CFF%22%20d%3D%22M14.07%200c-4.48%200-8.21%203.23-8.99%207.51l2.42.53C8.11%204.95%2010.84%202.5%2014.07%202.5c3.84%200%206.96%203.12%206.96%206.96%200%203.84-3.12%206.96-6.96%206.96-1.57%200-3.02-.52-4.19-1.4l-1.63%201.83c1.59%201.2%203.6%201.97%205.82%201.97%205.22%200%209.46-4.24%209.46-9.46S19.29%200%2014.07%200zm-8.24%208.78c-.76%200-1.38.62-1.38%201.38%200%20.76.62%201.38%201.38%201.38.76%200%201.38-.62%201.38-1.38%200-.76-.62-1.38-1.38-1.38zM2.42%2012.82l-2.42.53C.78%2017.63%204.51%2020.86%208.99%2020.86c4.48%200%208.21-3.23%208.99-7.51l-2.42-.53c-.61%203.09-3.34%205.54-6.57%205.54-3.84%200-6.96-3.12-6.96-6.96%200-3.84%203.12-6.96%206.96-6.96%201.57%200%203.02.52%204.19%201.4l1.63-1.83c-1.59-1.2-3.6-1.97-5.82-1.97C3.77%202%200%205.77%200%2010.42c0%20.84.11%201.65.31%202.4z%22%2F%3E%3C%2Fsvg%3E"
   },
   "ipfs": {
     "id": "ipfs",
@@ -403,20 +403,20 @@ export const OFFICIAL_LOGOS: Record<string, OfficialLogoMeta> = {
   "llamaindex": {
     "id": "llamaindex",
     "name": "LlamaIndex RAG",
-    "brandColor": "#38BDF8",
-    "keycapBg": "#075985",
+    "brandColor": "#7B3FE4",
+    "keycapBg": "#581C87",
     "source": "official-llamaindex",
-    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 3v18M3 12h18M7 7l10 10M17 7L7 17\" stroke=\"#38BDF8\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>",
-    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M12%203v18M3%2012h18M7%207l10%2010M17%207L7%2017%22%20stroke%3D%22%2338BDF8%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E"
+    "svg": "<svg viewBox=\"0 0 128 128\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"llamaGrad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#38BDF8\"/><stop offset=\"100%\" stop-color=\"#7C3AED\"/></linearGradient></defs><path d=\"M44 20h14v28h16v14h-8v46H52v-24H44v24H32V44h12V20z\" fill=\"url(#llamaGrad)\"/><rect x=\"66\" y=\"34\" width=\"30\" height=\"8\" rx=\"4\" fill=\"#38BDF8\"/><rect x=\"74\" y=\"50\" width=\"22\" height=\"8\" rx=\"4\" fill=\"#38BDF8\" opacity=\"0.8\"/><rect x=\"66\" y=\"66\" width=\"30\" height=\"8\" rx=\"4\" fill=\"#38BDF8\" opacity=\"0.6\"/><circle cx=\"48\" cy=\"28\" r=\"3\" fill=\"#FFF\"/></svg>",
+    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20128%20128%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M44%2020h14v28h16v14h-8v46H52v-24H44v24H32V44h12V20z%22%20fill%3D%22%237C3AED%22%2F%3E%3C%2Fsvg%3E"
   },
   "openai": {
     "id": "openai",
     "name": "OpenAI Embeddings",
     "brandColor": "#10A37F",
     "keycapBg": "#064E3B",
-    "source": "official-ai",
-    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2Z\"/><path d=\"M12 6v12M6 12h12M7.5 7.5l9 9M7.5 16.5l9-9\"/></svg>",
-    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%221.8%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%202a10%2010%200%200%201%2010%2010c0%205.523-4.477%2010-10%2010S2%2017.523%202%2012%206.477%202%2012%202Z%22%2F%3E%3Cpath%20d%3D%22M12%206v12M6%2012h12M7.5%207.5l9%209M7.5%2016.5l9-9%22%2F%3E%3C%2Fsvg%3E"
+    "source": "official-openai",
+    "svg": "<svg role=\"img\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\"><title>OpenAI</title><path fill=\"#10A37F\" d=\"M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 8.487a4.47 4.47 0 0 1 2.33-1.97v5.676a.79.79 0 0 0 .392.682l5.843 3.37-2.02 1.168a.076.076 0 0 1-.071 0l-4.839-2.794A4.504 4.504 0 0 1 2.34 8.487zm16.597 3.855l-5.843-3.37 2.02-1.168a.076.076 0 0 1 .071 0l4.839 2.793a4.5 4.5 0 0 1-.687 8.1v-5.674a.79.79 0 0 0-.4-.681zm2.71-4.238l-.142-.085-4.783-2.759a.771.771 0 0 0-.78 0L10.099 8.63V6.298a.08.08 0 0 1 .033-.062L14.97 3.44a4.5 4.5 0 0 1 6.67 4.664zM8.706 13.5l2.493-1.44 2.493 1.44v2.879L11.2 17.82l-2.493-1.44z\"/></svg>",
+    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20role%3D%22img%22%20viewBox%3D%220%200%2024%2024%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ctitle%3EOpenAI%3C%2Ftitle%3E%3Cpath%20fill%3D%22%2310A37F%22%20d%3D%22M22.282%209.821a5.985%205.985%200%200%200-.516-4.91%22%2F%3E%3C%2Fsvg%3E"
   },
   "pgvector": {
     "id": "pgvector",
@@ -424,8 +424,8 @@ export const OFFICIAL_LOGOS: Record<string, OfficialLogoMeta> = {
     "brandColor": "#336791",
     "keycapBg": "#0C4A6E",
     "source": "official-pgvector",
-    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M4 6h16M4 12h16M4 18h16\" stroke=\"#336791\" stroke-width=\"2\" stroke-linecap=\"round\"/><circle cx=\"9\" cy=\"6\" r=\"2\" fill=\"#38BDF8\"/><circle cx=\"15\" cy=\"12\" r=\"2\" fill=\"#38BDF8\"/><circle cx=\"12\" cy=\"18\" r=\"2\" fill=\"#38BDF8\"/></svg>",
-    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Cpath%20d%3D%22M4%206h16M4%2012h16M4%2018h16%22%20stroke%3D%22%23336791%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%226%22%20r%3D%222%22%20fill%3D%22%2338BDF8%22%2F%3E%3Ccircle%20cx%3D%2215%22%20cy%3D%2212%22%20r%3D%222%22%20fill%3D%22%2338BDF8%22%2F%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2218%22%20r%3D%222%22%20fill%3D%22%2338BDF8%22%2F%3E%3C%2Fsvg%3E"
+    "svg": "<svg viewBox=\"0 0 128 128\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"pgvGrad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#336791\"/><stop offset=\"100%\" stop-color=\"#0284C7\"/></linearGradient></defs><circle cx=\"64\" cy=\"64\" r=\"50\" fill=\"url(#pgvGrad)\"/><circle cx=\"64\" cy=\"64\" r=\"36\" fill=\"none\" stroke=\"#FFF\" stroke-width=\"2\" stroke-dasharray=\"4 4\" opacity=\"0.6\"/><line x1=\"64\" y1=\"64\" x2=\"88\" y2=\"38\" stroke=\"#38BDF8\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"64\" y1=\"64\" x2=\"36\" y2=\"82\" stroke=\"#38BDF8\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"64\" y1=\"64\" x2=\"92\" y2=\"76\" stroke=\"#38BDF8\" stroke-width=\"3\" stroke-linecap=\"round\"/><circle cx=\"64\" cy=\"64\" r=\"6\" fill=\"#FFF\"/><circle cx=\"88\" cy=\"38\" r=\"5\" fill=\"#38BDF8\"/><circle cx=\"36\" cy=\"82\" r=\"4\" fill=\"#38BDF8\"/><circle cx=\"92\" cy=\"76\" r=\"4\" fill=\"#38BDF8\"/></svg>",
+    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20128%20128%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Ccircle%20cx%3D%2264%22%20cy%3D%2264%22%20r%3D%2250%22%20fill%3D%22%23336791%22%2F%3E%3C%2Fsvg%3E"
   },
   "mcp": {
     "id": "mcp",
@@ -433,8 +433,8 @@ export const OFFICIAL_LOGOS: Record<string, OfficialLogoMeta> = {
     "brandColor": "#D97706",
     "keycapBg": "#78350F",
     "source": "official-mcp",
-    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\"><rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"4\" stroke=\"#D97706\" stroke-width=\"2\"/><circle cx=\"8\" cy=\"12\" r=\"2\" fill=\"#F59E0B\"/><circle cx=\"16\" cy=\"12\" r=\"2\" fill=\"#F59E0B\"/><path d=\"M10 12h4\" stroke=\"#F59E0B\" stroke-width=\"2\"/></svg>",
-    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%3E%3Crect%20x%3D%223%22%20y%3D%223%22%20width%3D%2218%22%20height%3D%2218%22%20rx%3D%224%22%20stroke%3D%22%23D97706%22%20stroke-width%3D%222%22%2F%3E%3Ccircle%20cx%3D%228%22%20cy%3D%2212%22%20r%3D%222%22%20fill%3D%22%23F59E0B%22%2F%3E%3Ccircle%20cx%3D%2216%22%20cy%3D%2212%22%20r%3D%222%22%20fill%3D%22%23F59E0B%22%2F%3E%3Cpath%20d%3D%22M10%2012h4%22%20stroke%3D%22%23F59E0B%22%20stroke-width%3D%222%22%2F%3E%3C%2Fsvg%3E"
+    "svg": "<svg viewBox=\"0 0 128 128\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"mcpGrad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#D97706\"/><stop offset=\"100%\" stop-color=\"#F59E0B\"/></linearGradient></defs><rect x=\"24\" y=\"24\" width=\"80\" height=\"80\" rx=\"20\" fill=\"url(#mcpGrad)\"/><circle cx=\"48\" cy=\"64\" r=\"10\" fill=\"#FFF\"/><circle cx=\"80\" cy=\"64\" r=\"10\" fill=\"#FFF\"/><path d=\"M58 64h12\" stroke=\"#FFF\" stroke-width=\"6\" stroke-linecap=\"round\"/><rect x=\"16\" y=\"44\" width=\"8\" height=\"10\" rx=\"3\" fill=\"#FEF3C7\"/><rect x=\"16\" y=\"74\" width=\"8\" height=\"10\" rx=\"3\" fill=\"#FEF3C7\"/><rect x=\"104\" y=\"44\" width=\"8\" height=\"10\" rx=\"3\" fill=\"#FEF3C7\"/><rect x=\"104\" y=\"74\" width=\"8\" height=\"10\" rx=\"3\" fill=\"#FEF3C7\"/><rect x=\"44\" y=\"16\" width=\"10\" height=\"8\" rx=\"3\" fill=\"#FEF3C7\"/><rect x=\"74\" y=\"16\" width=\"10\" height=\"8\" rx=\"3\" fill=\"#FEF3C7\"/><rect x=\"44\" y=\"104\" width=\"10\" height=\"8\" rx=\"3\" fill=\"#FEF3C7\"/><rect x=\"74\" y=\"104\" width=\"10\" height=\"8\" rx=\"3\" fill=\"#FEF3C7\"/></svg>",
+    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20128%20128%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%2224%22%20y%3D%2224%22%20width%3D%2280%22%20height%3D%2280%22%20rx%3D%2220%22%20fill%3D%22%23D97706%22%2F%3E%3C%2Fsvg%3E"
   },
   "figma": {
     "id": "figma",
@@ -448,11 +448,11 @@ export const OFFICIAL_LOGOS: Record<string, OfficialLogoMeta> = {
   "designsystems": {
     "id": "designsystems",
     "name": "Design Systems",
-    "brandColor": "#A855F7",
-    "keycapBg": "#6B21A8",
-    "source": "fallback",
-    "svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"9\"/></svg>",
-    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3C%2Fsvg%3E"
+    "brandColor": "#EC4899",
+    "keycapBg": "#9D174D",
+    "source": "official-designsystems",
+    "svg": "<svg viewBox=\"0 0 128 128\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"dsGrad\" x1=\"0%\" y1=\"0%\" x2=\"100%\" y2=\"100%\"><stop offset=\"0%\" stop-color=\"#EC4899\"/><stop offset=\"100%\" stop-color=\"#A855F7\"/></linearGradient></defs><rect x=\"22\" y=\"22\" width=\"36\" height=\"36\" rx=\"8\" fill=\"url(#dsGrad)\"/><circle cx=\"88\" cy=\"40\" r=\"18\" fill=\"#EC4899\" opacity=\"0.85\"/><polygon points=\"40,74 22,106 58,106\" fill=\"#A855F7\" opacity=\"0.9\"/><rect x=\"70\" y=\"70\" width=\"36\" height=\"36\" rx=\"18\" fill=\"#38BDF8\" opacity=\"0.85\"/><path d=\"M58 40h12M40 58v16M88 58v12M76 88H58\" stroke=\"#FFF\" stroke-width=\"3\" stroke-linecap=\"round\" opacity=\"0.7\"/></svg>",
+    "dataUri": "data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%20128%20128%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Crect%20x%3D%2222%22%20y%3D%2222%22%20width%3D%2236%22%20height%3D%2236%22%20rx%3D%228%22%20fill%3D%22%23EC4899%22%2F%3E%3C%2Fsvg%3E"
   },
   "git": {
     "id": "git",

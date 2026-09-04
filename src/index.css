@@ -349,6 +349,19 @@ body {
   }
 }
 
+/* ─── 5-LINE PURE SKILLS AMBIENT DRIFT ─────────────────────────────── */
+.skills-drift-left {
+  display: flex;
+  width: max-content;
+  animation: scrollMarqueeForward 40s linear infinite;
+}
+
+.skills-drift-right {
+  display: flex;
+  width: max-content;
+  animation: scrollMarqueeReverse 40s linear infinite;
+}
+
 .marquee-item {
   font-family: var(--font-display);
   font-weight: 700;

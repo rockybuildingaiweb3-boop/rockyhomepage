@@ -1,3 +1,5 @@
+import { SKILL_ICONS } from './skillIcons';
+
 export interface SkillItem {
   id: string;
   name: string;
@@ -9,6 +11,11 @@ export interface SkillItem {
   experience: string;
   tags: string[];
   relatedProjects?: string[];
+
+  // User requested Scheme A (Simple Icons CDN URL) & Scheme B (Iconify identifier)
+  icon?: string;
+  iconify?: string;
+  cdnSlug?: string;
 
   // Compatibility aliases
   role?: string;
@@ -69,7 +76,7 @@ export const PROJECT_NAMES: Record<
  * 50 Precise Skill Modules (5 Tiers, 10 per row)
  * Spanning Modern Full-Stack, 3D/Creative Graphics, Cloud Systems, Web3 & AI Agents
  */
-export const SKILLS_DATA: SkillItem[] = [
+const RAW_SKILLS_DATA: SkillItem[] = [
   // ─── ROW 1: Core Frontend & Kinetic Motion (10) ─────────────────────────────
   {
     id: 'typescript',
@@ -930,6 +937,20 @@ export const SKILLS_DATA: SkillItem[] = [
     shortRole: 'Runtime Animation',
   },
 ];
+
+/**
+ * 50 Skills populated with official Simple Icons CDN (Scheme A)
+ * and @iconify/react identifiers (Scheme B)
+ */
+export const SKILLS_DATA: SkillItem[] = RAW_SKILLS_DATA.map((s) => {
+  const iconDef = SKILL_ICONS[s.id];
+  return {
+    ...s,
+    icon: iconDef?.cdnUrl || `https://cdn.simpleicons.org/${s.id}`,
+    iconify: iconDef?.iconifyIcon || `simple-icons:${s.id}`,
+    cdnSlug: iconDef?.id || s.id,
+  };
+});
 
 // Helper maps by row
 export const SKILLS_BY_ROW: Record<number, SkillItem[]> = {

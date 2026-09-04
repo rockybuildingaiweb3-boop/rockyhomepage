@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Volume2, VolumeX, Sparkles, Command } from 'lucide-react';
 import { SkillItem } from '../../data/skills';
 import { OFFICIAL_LOGOS } from '../../data/officialLogos';
+import { TechLogo } from './TechLogo';
 import { playMechanicalClick } from './audio';
 
 interface SkillKeycapsBoardProps {
@@ -205,20 +206,8 @@ export const SkillKeycapsBoard: React.FC<SkillKeycapsBoardProps> = ({
                             ${isActive ? 'scale-105' : 'group-hover:scale-102'}
                           `}
                         >
-                          {/* Official Vector Logo */}
-                          {logoMeta?.dataUri ? (
-                            <img
-                              src={logoMeta.dataUri}
-                              alt={skill.name}
-                              className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 object-contain pointer-events-none drop-shadow-md"
-                              loading="lazy"
-                              referrerPolicy="no-referrer"
-                            />
-                          ) : (
-                            <span className="text-white text-xs font-bold">
-                              {skill.name.slice(0, 2)}
-                            </span>
-                          )}
+                          {/* Official Vector Logo (Scheme A CDN + Scheme B Iconify) */}
+                          <TechLogo id={skill.id} size={26} color="#FFFFFF" />
 
                           {/* Key Label Text (Minimalist legend) */}
                           <span
