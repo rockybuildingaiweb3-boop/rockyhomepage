@@ -1,0 +1,288 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Questrial&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://use.typekit.net/goc4cow.css');
+
+:root {
+  --c-light: #F4F6F8;
+  --c-dark-grey: #212B36;
+  --title-font: 'freight-big-pro', 'Playfair Display', Georgia, serif;
+  --body-font: 'Questrial', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+html, body, #root {
+  background-color: #030014;
+}
+
+body {
+  background-color: #030014;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: var(--body-font);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Locally scoped Atmosphere Layer: Particle Background */
+.particle-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particle-background canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Locally scoped Content Layer: Work Section Three.js Canvas */
+.work-three-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* Work Slider Interaction and Card Compression (Musab-Hassan specification) */
+.work-list {
+  transition: opacity 0.5s ease;
+}
+
+.work-list .work-item-card {
+  transition: width 0.7s cubic-bezier(0.25, 1, 0.5, 1), height 0.7s cubic-bezier(0.25, 1, 0.5, 1), margin 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.work-list.is-dragging .work-item-card:not(.active) {
+  height: 45vh !important;
+}
+
+.work-card-text {
+  transition: opacity 0.3s ease;
+}
+
+.work-card-text.is-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+#scroll-frame {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+/* Typography Classes matching original site */
+.title {
+  color: white;
+  font-weight: 700;
+  font-style: normal;
+  font-family: var(--title-font);
+  text-transform: lowercase;
+  line-height: 80%;
+}
+
+.subtitle, .subheader {
+  color: white;
+  font-weight: 700;
+  font-style: normal;
+  font-family: var(--title-font);
+  text-transform: lowercase;
+}
+
+.paragraph {
+  font-family: var(--body-font);
+  color: white;
+}
+
+@media only screen and (max-width: 750px) {
+  .paragraph {
+    font-size: 3.4vw !important;
+  }
+  .title {
+    font-size: 22vw;
+  }
+  .subtitle {
+    font-size: 4vw;
+    letter-spacing: 0.7vw;
+  }
+  .subheader {
+    font-size: 3vw;
+    letter-spacing: 0.7vw;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .title {
+    font-size: 19vh;
+  }
+  .subtitle {
+    font-size: 3vh;
+    letter-spacing: 1vh;
+  }
+  .subheader {
+    font-size: 2vh;
+    letter-spacing: 1vh;
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  .paragraph {
+    font-size: 1.8vh;
+    line-height: 150%;
+    width: 60%;
+    letter-spacing: 0.05vw;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .paragraph {
+    font-size: 2vw;
+    line-height: 180% !important;
+    letter-spacing: 0;
+    width: 100% !important;
+  }
+}
+
+/* Button & Underline hover effect */
+.button {
+  font-family: var(--body-font);
+  text-transform: lowercase;
+  color: white;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+.button a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.button:not(.no-decor)::after,
+.button:not(.no-decor)::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  background-color: white;
+  pointer-events: none;
+}
+
+.button:not(.no-decor)::after {
+  left: 0;
+  width: 0%;
+  transition: width 0.8s ease;
+}
+
+.button:not(.no-decor)::before {
+  right: 0;
+  width: 100%;
+  transition: width 0.5s ease;
+}
+
+.button:not(.no-decor):hover::after {
+  width: 100%;
+}
+
+.button:not(.no-decor):hover::before {
+  width: 0%;
+}
+
+/* Signature stroke initial state */
+#signature .path-1 {
+  stroke-dasharray: 365;
+  stroke-dashoffset: 365;
+}
+
+#signature .path-2 {
+  stroke-dasharray: 85;
+  stroke-dashoffset: 85;
+}
+
+#signature .path-3 {
+  stroke-dasharray: 45;
+  stroke-dashoffset: 45;
+}
+
+#signature .path-4 {
+  stroke-dasharray: 180;
+  stroke-dashoffset: 180;
+}
+
+@keyframes scrollArrowLoop {
+  0% {
+    transform: translateY(-120%);
+  }
+  30% {
+    transform: translateY(0%);
+  }
+  70% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(120%);
+  }
+}
+
+/* Subtle floating spatial depth effect */
+@keyframes spatialFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(0.4deg);
+  }
+}
+
+@keyframes spatialFloatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+.spatial-float {
+  animation: spatialFloat 8s ease-in-out infinite;
+}
+
+.spatial-float-slow {
+  animation: spatialFloatSlow 11s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spatial-float,
+  .spatial-float-slow {
+    animation: none !important;
+  }
+}
+
