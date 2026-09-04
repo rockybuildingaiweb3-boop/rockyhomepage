@@ -1,52 +1,63 @@
 import React, { useState } from 'react';
-import { SkillItem } from '../data/skills';
+import { SKILLS_DATA, SkillItem } from '../data/skills';
 import { SkillText } from './skills/SkillText';
-import { SkillsKeyboard } from './skills/SkillsKeyboard';
-import { SkillDetailDrawer } from './skills/SkillDetailDrawer';
+import { SkillSpotlight } from './skills/SkillSpotlight';
+import { SkillConstellation } from './skills/SkillConstellation';
+import { SkillsMarquee } from './skills/SkillsMarquee';
 
 interface SkillsSectionProps {
   onSelectProject?: (projectId: string) => void;
 }
 
+/**
+ * SkillsSection
+ * 
+ * Harmonious integration of:
+ * 1. Image 1: The floating skill icons constellation (tiered pyramid layout over space vortex)
+ * 2. Image 2: The 3D extruded headline & punchy one-liner quote spotlight (e.g. Tailwind)
+ * 3. Transparent Seamless Flowing Marquee: Specifically streaming the skills alongside their
+ *    quotes across the viewport, completely transparent with starfield particles flowing through.
+ */
 export const SkillsSection: React.FC<SkillsSectionProps> = ({ onSelectProject }) => {
-  const [selectedSkill, setSelectedSkill] = useState<SkillItem | null>(null);
+  // Default to 'tailwind' as showcased in user's Image 2!
+  const defaultSkill =
+    SKILLS_DATA.find((s) => s.id === 'tailwind') || SKILLS_DATA[0];
+  const [activeSkill, setActiveSkill] = useState<SkillItem>(defaultSkill);
 
   return (
     <section
       id="skills"
-      className="relative flex flex-col items-center justify-center w-full min-h-screen pt-16 sm:pt-20 md:pt-24 pb-24 sm:pb-32 md:pb-40 px-3 sm:px-6 md:px-10 lg:px-12 text-white z-10 bg-transparent overflow-x-clip"
-      aria-label="Skills Mechanical Keyboard"
+      className="relative flex flex-col items-center justify-center w-full min-h-screen pt-28 sm:pt-36 md:pt-40 pb-28 sm:pb-36 text-white z-10 bg-transparent overflow-x-clip"
+      aria-label="Skills & Technologies"
     >
       {/* 
-        WORK → SKILLS SPATIAL ATMOSPHERIC BRIDGE
-        Soft cosmic radial aura that bridges smoothly between the Work horizontal slider
-        and the Skills section.
+        LAYER 1: Subtle Cosmic Glow (Transparent & non-blocking)
       */}
       <div
-        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[90vw] max-w-[1200px] h-[450px] pointer-events-none -z-10"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] max-w-[1100px] h-[550px] pointer-events-none -z-10"
         style={{
           background:
-            'radial-gradient(ellipse 65% 45% at 50% 50%, rgba(112, 66, 248, 0.12) 0%, rgba(79, 70, 229, 0.04) 40%, transparent 70%)',
-          filter: 'blur(80px)',
+            'radial-gradient(ellipse 60% 45% at 50% 50%, rgba(112, 66, 248, 0.08) 0%, rgba(79, 70, 229, 0.02) 45%, transparent 75%)',
+          filter: 'blur(90px)',
         }}
         aria-hidden="true"
       />
 
       {/* 
-        LAYER 2: Central Purple Nebula Video Background
-        Feathered using a RADIAL ELLIPTICAL MASK so all 4 edges fade 100% to transparent.
+        LAYER 2: Cosmic Purple Vortex / Video Sphere (Directly from Image 1)
+        Blended via screen mode and subtle opacity so Three.js star particles remain sharply visible.
       */}
       <div
         className="absolute inset-0 w-full h-full pointer-events-none -z-10 flex items-center justify-center overflow-hidden"
         style={{
           maskImage:
-            'radial-gradient(ellipse 70% 55% at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 35%, rgba(0, 0, 0, 0.25) 60%, transparent 80%)',
+            'radial-gradient(ellipse 70% 55% at 50% 50%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 45%, transparent 75%)',
           WebkitMaskImage:
-            'radial-gradient(ellipse 70% 55% at 50% 50%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 35%, rgba(0, 0, 0, 0.25) 60%, transparent 80%)',
+            'radial-gradient(ellipse 70% 55% at 50% 50%, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 45%, transparent 75%)',
         }}
       >
         <video
-          className="w-full h-auto min-h-full min-w-full object-cover opacity-55 pointer-events-none select-none"
+          className="w-full h-auto min-h-full min-w-full object-cover opacity-20 pointer-events-none select-none mix-blend-screen"
           preload="auto"
           playsInline
           loop
@@ -56,38 +67,36 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ onSelectProject })
         />
       </div>
 
-      {/* Controlled Purple Spatial Atmosphere Core Glow */}
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85vw] max-w-[1100px] h-[70vh] max-h-[700px] rounded-full pointer-events-none -z-10"
-        style={{
-          background:
-            'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(112, 66, 248, 0.14) 0%, rgba(147, 51, 234, 0.04) 45%, transparent 70%)',
-          filter: 'blur(90px)',
-        }}
-        aria-hidden="true"
-      />
-
-      {/* Header Typography */}
+      {/* 1. EDITORIAL HEADER */}
       <SkillText />
 
       {/* 
-        3D INTERACTIVE MECHANICAL KEYBOARD SKILLS SHOWCASE
-        Inspired by Naresh-Khatri 3D developer portfolio.
-        Every keycap is a skill with official brand logos, tactile sound synthesis,
-        and real-time cybernetic OLED telemetry readout!
+        2. 3D SPOTLIGHT DISPLAY (Directly inspired by Image 2)
+        Shows 3D extruded skill name + its punchy one-liner (e.g. Tailwind: "utility classes hitting diff fr fr")
       */}
-      <div className="w-full z-10">
-        <SkillsKeyboard
-          onSelectSkill={(skill) => setSelectedSkill(skill)}
-          onSelectProject={onSelectProject}
-        />
-      </div>
-
-      {/* Deep-Dive Expandable Blueprint Inspector Modal */}
-      <SkillDetailDrawer
-        skill={selectedSkill}
-        onClose={() => setSelectedSkill(null)}
+      <SkillSpotlight
+        activeSkill={activeSkill}
         onSelectProject={onSelectProject}
+      />
+
+      {/* 
+        3. SKILL CONSTELLATION (Directly matching Image 1)
+        Floating tiered pyramid of official skill icons over the space vortex.
+        Hovering or clicking any icon smoothly updates the 3D Spotlight above!
+      */}
+      <SkillConstellation
+        activeSkillId={activeSkill.id}
+        onSelectSkill={(skill) => setActiveSkill(skill)}
+      />
+
+      {/* 
+        4. TRANSPARENT INFINITE FLOWING MARQUEE (Showcasing Skill One-Liners)
+        Dual tracks flowing in opposite directions with official logos, names, and quotes.
+        100% transparent so background Three.js starfield particles drift right through.
+      */}
+      <SkillsMarquee
+        activeSkillId={activeSkill.id}
+        onSelectSkill={(skill) => setActiveSkill(skill)}
       />
     </section>
   );

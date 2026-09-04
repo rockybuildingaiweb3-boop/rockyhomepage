@@ -1,0 +1,195 @@
+import React, { useState } from 'react';
+import { SKILLS_DATA, SkillItem } from '../../data/skills';
+import { TechLogo } from './TechLogo';
+
+// Helper to safely fetch skill data by ID
+const getSkill = (id: string): SkillItem => {
+  const found = SKILLS_DATA.find((s) => s.id === id);
+  if (found) return found;
+  return {
+    id,
+    name: id.toUpperCase(),
+    row: 1,
+    rowTitle: 'Core Stack',
+    category: 'Technology',
+    brandColor: '#A855F7',
+    positioning: `${id} platform architecture`,
+    experience: `Production integration with ${id}`,
+    tags: [id],
+    shortDescription: `Crafting high-velocity web experiences with ${id} 🚀`,
+  };
+};
+
+// Track 1: Rows 1 & 2 (Frontend, Interaction, 3D & Graphics) - Strictly De-duplicated (20 unique skills)
+const TRACK_1_SKILLS: SkillItem[] = [
+  getSkill('typescript'),
+  getSkill('javascript'),
+  getSkill('react'),
+  getSkill('nextjs'),
+  getSkill('svelte'),
+  getSkill('tailwind'),
+  getSkill('motion'),
+  getSkill('gsap'),
+  getSkill('html5'),
+  getSkill('vite'),
+  getSkill('threejs'),
+  getSkill('webgl'),
+  getSkill('glsl'),
+  getSkill('webgpu'),
+  getSkill('r3f'),
+  getSkill('blender'),
+  getSkill('spline'),
+  getSkill('draco'),
+  getSkill('uvbaking'),
+  getSkill('canvas'),
+];
+
+// Track 2: Rows 3, 4 & 5 (Backend, Systems, Web3 & AI Agents) - Strictly De-duplicated (30 unique skills)
+const TRACK_2_SKILLS: SkillItem[] = [
+  getSkill('nodejs'),
+  getSkill('express'),
+  getSkill('postgresql'),
+  getSkill('supabase'),
+  getSkill('prisma'),
+  getSkill('drizzle'),
+  getSkill('redis'),
+  getSkill('trpc'),
+  getSkill('graphql'),
+  getSkill('docker'),
+  getSkill('solidity'),
+  getSkill('viem'),
+  getSkill('wagmi'),
+  getSkill('ethers'),
+  getSkill('foundry'),
+  getSkill('privy'),
+  getSkill('erc4337'),
+  getSkill('thegraph'),
+  getSkill('ipfs'),
+  getSkill('siwe'),
+  getSkill('vercelai'),
+  getSkill('langchain'),
+  getSkill('llamaindex'),
+  getSkill('openai'),
+  getSkill('pgvector'),
+  getSkill('mcp'),
+  getSkill('figma'),
+  getSkill('designsystems'),
+  getSkill('git'),
+  getSkill('rive'),
+];
+
+interface SkillsMarqueeProps {
+  activeSkillId?: string;
+  onSelectSkill?: (skill: SkillItem) => void;
+}
+
+/**
+ * SkillsMarquee
+ * 
+ * 100% Transparent Seamless Flowing Marquee.
+ * Specifically built to showcase the user's punchy one-liner quote for each skill
+ * (e.g. Tailwind: "utility classes hitting diff fr fr").
+ * 
+ * Features:
+ * - 100% transparent: background 3D starfield particles drift right through
+ * - Dual-track opposing flows (Track 1 forward, Track 2 reverse)
+ * - Seamless infinite loop pausing on hover
+ * - Displays [Official Vector Logo] [Skill Name] — "[Punchy One-Liner]"
+ * - Clicking or hovering any quote item triggers the 3D Spotlight display
+ */
+export const SkillsMarquee: React.FC<SkillsMarqueeProps> = ({
+  activeSkillId,
+  onSelectSkill,
+}) => {
+  const [hoveredSkillId, setHoveredSkillId] = useState<string | null>(null);
+
+  const renderMarqueeItem = (skill: SkillItem, keyPrefix: string) => {
+    const isHovered = hoveredSkillId === skill.id;
+    const isActive = activeSkillId === skill.id;
+    const quote = skill.shortDescription || skill.positioning;
+
+    return (
+      <button
+        key={`${keyPrefix}-${skill.id}`}
+        type="button"
+        onClick={() => onSelectSkill?.(skill)}
+        onMouseEnter={() => {
+          setHoveredSkillId(skill.id);
+          onSelectSkill?.(skill);
+        }}
+        onMouseLeave={() => setHoveredSkillId(null)}
+        className="marquee-quote-item group/quote cursor-pointer text-left"
+      >
+        {/* Unified Glass Pod for the Logo */}
+        <span className="flex items-center gap-2.5 shrink-0">
+          <span
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-white/[0.05] border border-white/10 flex items-center justify-center transition-transform duration-300 group-hover/quote:scale-110"
+            style={{
+              borderColor: isHovered || isActive ? skill.brandColor : 'rgba(255, 255, 255, 0.1)',
+              boxShadow:
+                isHovered || isActive
+                  ? `0 0 12px ${skill.brandColor}60`
+                  : '0 2px 6px rgba(0,0,0,0.5)',
+            }}
+          >
+            <TechLogo
+              id={skill.id}
+              size={18}
+              color={isHovered || isActive ? skill.brandColor : undefined}
+            />
+          </span>
+
+          <span
+            className="font-bold uppercase tracking-wide text-sm sm:text-base font-['Bricolage_Grotesque'] transition-colors duration-200"
+            style={{
+              color: isHovered || isActive ? skill.brandColor : '#FFFFFF',
+              textShadow: isHovered || isActive ? `0 0 12px ${skill.brandColor}80` : 'none',
+            }}
+          >
+            {skill.name}
+          </span>
+        </span>
+
+        {/* Separator dash */}
+        <span className="text-neutral-500 font-mono text-xs select-none">—</span>
+
+        {/* The One-Liner Quote */}
+        <span
+          className={`font-medium text-xs sm:text-sm tracking-normal transition-colors duration-200 ${
+            isHovered || isActive
+              ? 'text-white font-semibold drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]'
+              : 'text-neutral-300 group-hover/quote:text-white'
+          }`}
+        >
+          &ldquo;{quote}&rdquo;
+        </span>
+      </button>
+    );
+  };
+
+  return (
+    <div className="w-full flex flex-col gap-3 sm:gap-5 my-6 sm:my-10 select-none relative z-10">
+      {/* 
+        TRACK 1: Rows 1 & 2 Skills Stream (Flowing Forward / Left)
+        Completely transparent background so star particles flow right through.
+      */}
+      <div className="marquee-band group">
+        <div className="marquee-track marquee-track-forward">
+          {TRACK_1_SKILLS.map((skill) => renderMarqueeItem(skill, 't1-a'))}
+          {TRACK_1_SKILLS.map((skill) => renderMarqueeItem(skill, 't1-b'))}
+        </div>
+      </div>
+
+      {/* 
+        TRACK 2: Rows 3, 4 & 5 Skills Stream (Flowing Reverse / Right)
+        Completely transparent background so star particles flow right through.
+      */}
+      <div className="marquee-band group">
+        <div className="marquee-track marquee-track-reverse">
+          {TRACK_2_SKILLS.map((skill) => renderMarqueeItem(skill, 't2-a'))}
+          {TRACK_2_SKILLS.map((skill) => renderMarqueeItem(skill, 't2-b'))}
+        </div>
+      </div>
+    </div>
+  );
+};

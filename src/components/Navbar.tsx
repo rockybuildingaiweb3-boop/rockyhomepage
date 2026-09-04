@@ -26,9 +26,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
   };
 
   return (
-    <nav className="fixed top-[10vh] left-0 w-full z-[100] px-[7vw] flex flex-row justify-between items-center box-border pointer-events-none">
+    <nav className="fixed top-4 sm:top-6 left-0 w-full z-[100] px-6 sm:px-10 md:px-14 flex flex-row justify-between items-center box-border pointer-events-none transition-all duration-300">
       {/* Brand Logo */}
-      <div className="overflow-hidden h-[6vh] w-[7vh] mix-blend-exclusion cursor-pointer pointer-events-auto">
+      <div className="overflow-hidden h-8 sm:h-9 w-10 sm:w-12 mix-blend-exclusion cursor-pointer pointer-events-auto">
         <button
           onClick={() => handleNavClick('home')}
           className="border-none bg-transparent cursor-pointer p-0 m-0 w-full h-full flex items-center justify-center clickable"
@@ -45,50 +45,50 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
 
       {/* Desktop & Mobile Menu */}
       <div className="flex items-center pointer-events-auto">
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex list-none mix-blend-exclusion overflow-hidden m-0 p-0 items-center">
-          <li className="font-[family-name:var(--body-font)] uppercase text-[2vh] tracking-[0.2vh] inline-flex items-center">
+        {/* Desktop Menu - Refined typography to avoid header collisions */}
+        <ul className="hidden md:flex list-none mix-blend-exclusion overflow-hidden m-0 p-0 items-center gap-1">
+          <li className="font-mono uppercase text-xs tracking-[0.2em] inline-flex items-center">
             <button
               onClick={() => handleNavClick('home')}
-              className="border-none bg-transparent text-white uppercase font-inherit text-inherit tracking-inherit cursor-pointer clickable hover:opacity-80 transition-opacity"
+              className="border-none bg-transparent text-white/90 uppercase font-inherit text-inherit tracking-inherit cursor-pointer clickable hover:text-white transition-colors"
             >
               Home
             </button>
-            <span className="mx-[0.4vw] text-white/70">-</span>
+            <span className="mx-2 text-white/40">·</span>
           </li>
-          <li className="font-[family-name:var(--body-font)] uppercase text-[2vh] tracking-[0.2vh] inline-flex items-center">
+          <li className="font-mono uppercase text-xs tracking-[0.2em] inline-flex items-center">
             <button
               onClick={() => handleNavClick('work')}
-              className="border-none bg-transparent text-white uppercase font-inherit text-inherit tracking-inherit cursor-pointer clickable hover:opacity-80 transition-opacity"
+              className="border-none bg-transparent text-white/90 uppercase font-inherit text-inherit tracking-inherit cursor-pointer clickable hover:text-white transition-colors"
             >
               Work
             </button>
-            <span className="mx-[0.4vw] text-white/70">-</span>
+            <span className="mx-2 text-white/40">·</span>
           </li>
-          <li className="font-[family-name:var(--body-font)] uppercase text-[2vh] tracking-[0.2vh] inline-flex items-center">
+          <li className="font-mono uppercase text-xs tracking-[0.2em] inline-flex items-center">
             <button
               onClick={() => handleNavClick('skills')}
-              className="border-none bg-transparent text-white uppercase font-inherit text-inherit tracking-inherit cursor-pointer clickable hover:opacity-80 transition-opacity"
+              className="border-none bg-transparent text-white/90 uppercase font-inherit text-inherit tracking-inherit cursor-pointer clickable hover:text-white transition-colors"
             >
               Skills
             </button>
-            <span className="mx-[0.4vw] text-white/70">-</span>
+            <span className="mx-2 text-white/40">·</span>
           </li>
-          <li className="font-[family-name:var(--body-font)] uppercase text-[2vh] tracking-[0.2vh] inline-flex items-center">
+          <li className="font-mono uppercase text-xs tracking-[0.2em] inline-flex items-center">
             <a
               href="mailto:holmepavolini@gmail.com"
-              className="text-white uppercase font-inherit text-inherit tracking-inherit no-underline clickable hover:opacity-80 transition-opacity"
+              className="text-white/90 uppercase font-inherit text-inherit tracking-inherit no-underline clickable hover:text-white transition-colors"
             >
               Contact
             </a>
-            <span className="mx-[0.4vw] text-white/70">-</span>
+            <span className="mx-2 text-white/40">·</span>
           </li>
-          <li className="font-[family-name:var(--body-font)] uppercase text-[2vh] tracking-[0.2vh] inline-flex items-center">
+          <li className="font-mono uppercase text-xs tracking-[0.2em] inline-flex items-center">
             <a
               href="https://github.com/Musab-Hassan/musabhassan.com"
               target="_blank"
               rel="noreferrer"
-              className="text-white uppercase font-inherit text-inherit tracking-inherit no-underline clickable hover:opacity-80 transition-opacity"
+              className="text-white/90 uppercase font-inherit text-inherit tracking-inherit no-underline clickable hover:text-white transition-colors"
             >
               Github
             </a>
@@ -125,7 +125,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigate }) => {
 
       {/* Mobile Menu Drawer */}
       <div
-        className={`fixed top-[-10.1vh] right-0 h-screen bg-[#131314] z-[105] transition-all duration-700 ease-[cubic-bezier(0.58,0.14,0.06,0.97)] overflow-hidden flex flex-col justify-center px-[10vw] pt-[10vh] ${
+        className={`fixed top-0 right-0 h-screen bg-[#131314] z-[105] transition-all duration-700 ease-[cubic-bezier(0.58,0.14,0.06,0.97)] overflow-hidden flex flex-col justify-center px-[10vw] pt-[10vh] ${
           mobileMenuActive ? 'w-screen left-0 pointer-events-auto' : 'w-0 pointer-events-none'
         }`}
       >
